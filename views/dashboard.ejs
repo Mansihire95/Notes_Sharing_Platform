@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Online Notes Sharing</title>
+  <!-- Link to the external dashboard CSS -->
+  <link rel="stylesheet" href="/stylesheets/dashboard.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <h1>Online Notes Sharing</h1>
+  </header>
+
+  <div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/upload-notes">Upload Notes</a>
+    <a href="/view-my-notes">View My Notes</a>
+    <a href="/view-all-notes">View All Notes</a>
+    <a href="/logout">Logout</a>
+  </div>
+
+  <!-- Dashboard Content -->
+  <div class="content">
+    <div class="welcome-message">
+      <p>Welcome, <%= user.fullName %>!</p>
+    </div>
+
+ 
+
+
+<!--
+    <div class="options">
+      <a href="/upload-notes" class="option-btn">Upload Notes</a>
+      <a href="/view-notes" class="option-btn">View Your Notes</a>
+      <a href="/view-all-notes" class="option-btn">View All Notes</a>
+    </div>-->
+  </div>
+</body>
+</html>

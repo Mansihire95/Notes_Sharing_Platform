@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | Notes Sharing Platform</title>
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+</head>
+<body>
+    <div class="container">
+        <p class="header">Create Your Account</p>
+        <form action="/signup" method="post">
+            <input type="text" name="fullName" placeholder="Full Name" class="detail" required /><br />
+            <input type="email" name="email" placeholder="Email Address" class="detail" required /><br />
+            <input type="password" name="password" placeholder="Password (min 6 characters)" class="detail" required /><br />
+            <select name="branch" class="detail" required>
+                <option value="" disabled selected>Select Your Branch</option>
+                <option value="CSE">Computer Science</option>
+                <option value="ECE">Electronics</option>
+                <option value="IT">Information Technology</option>
+                <option value="ME">Mechanical</option>
+                <option value="CE">Civil</option>
+            </select><br />
+            <select name="role" class="detail" required>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select><br />
+            <input type="submit" class="btn" value="Register Account" />
+        </form>
+        <footer>
+            <p>Already have an account? <a href="/login">Login</a></p>
+        </footer>
+    </div>
+</body>
+</html>

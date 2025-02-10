@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View My Notes</title>
+    <link rel="stylesheet" href="/stylesheets/view-my-notes.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <%= username %>!</h1>
+        <h2>Your Uploaded Notes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No</th>
+                    <th>Upload Date</th>
+                    <th>Branch & Subject</th>
+                    <th>File Type</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (notes.length > 0) { %>
+                    <% notes.forEach((note, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= note.uploadDate.toLocaleDateString() %></td>
+                            <td><%= note.branch %> - <%= note.subject %></td>
+                            <td><%= note.file.split('.').pop().toUpperCase() %></td> <!-- Extract and display file type -->
+                    
+                            <td><%= note.description %></td>
+                            <td><a href="/download/<%= note._id %>" class="btn">Download</a></td>
+                        </tr>
+                    <% }); %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="6">No notes uploaded yet!</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
